@@ -1,0 +1,35 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: hsla(0, 0%, 100%, 0.4);
+  padding: 1rem;
+  width: 30rem;
+  border-radius: 1rem;
+}
+
+.searchContainer button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.searchIcon {
+  font-size: 4rem;
+}
+
+.searchContainer input {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.searchContainer input:focus {
+  outline: none;
+}
