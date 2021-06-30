@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const ToggleButton = styled.div`
   height: 80%;
-  width: 45%;
+  width: 90%;
   background-color: white;
   border-radius: 0.3rem;
-  justify-self: ${props => (props.isMetric ? 'flex-start' : 'flex-end')};
+  grid-column-start: ${({ isMetric }) => (isMetric ? 1 : 2)};
 `;
 
 export default ToggleButton;

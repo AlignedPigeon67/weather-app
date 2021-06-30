@@ -4,7 +4,7 @@ import ToggleButton from '../UI/ToggleButton';
 const UnitToggle = ({ isMetric, handleUnitToggle }) => {
   return (
     <div className={styles.toggleContainer}>
-      <ToggleButton isMetric onClick={handleUnitToggle} />
+      <ToggleButton isMetric={isMetric} onClick={handleUnitToggle} />
     </div>
   );
 };
