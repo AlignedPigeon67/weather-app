@@ -14,7 +14,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
   const [input, setInput] = useState('');
-  const [query, setQuery] = useState('manchester');
+  const [query, setQuery] = useState('edinburgh');
   const [isMetric, setIsMetric] = useState(true);
 
   useEffect(() => {
@@ -28,7 +28,6 @@ function App() {
         data => {
           setWeatherData(data);
           setIsLoaded(true);
-          console.log(data);
         },
         err => {
           setError(err);
@@ -42,21 +41,18 @@ function App() {
     setQuery(input);
   };
 
-  const handleChange = e => {
-    setInput(e.target.value);
-  };
+  const handleChange = e => setInput(e.target.value);
 
-  const handleUnitToggle = () => {
-    setIsMetric(!isMetric);
-    console.log(isMetric);
-  };
+  const handleUnitToggle = () => setIsMetric(!isMetric);
 
-  const background = weatherData?.main.temp > 18 ? 'warm-bg' : 'cold-bg';
+  const tempLimit = isMetric ? 15 : 59;
+
+  const background = weatherData?.main.temp > tempLimit ? 'warm-bg' : 'cold-bg';
 
   return (
     <div className={`app ${background}`}>
       <InfoBox data={weatherData} isLoaded={isLoaded} isMetric={isMetric} />
-      <span>
+      <span className="inputContainer">
         <UnitToggle isMetric={isMetric} handleUnitToggle={handleUnitToggle} />
         <SearchBar change={handleChange} input={handleInput} />
       </span>

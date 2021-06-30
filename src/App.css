@@ -19,3 +19,9 @@
   background-image: url('./assets/warm-bg.svg');
   background-position: 49%;
 }
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}

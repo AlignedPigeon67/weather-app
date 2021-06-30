@@ -1,10 +1,35 @@
+.outerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: white;
+}
+
+.outerContainer h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
 .toggleContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  height: 2rem;
-  width: 5rem;
+  height: 4rem;
+  width: 9rem;
   background-color: var(--trans-bg);
-  border-radius: 0.5rem;
-  padding: 0.1rem 0.2rem;
+  border-radius: 10rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.indicators {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 5rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
