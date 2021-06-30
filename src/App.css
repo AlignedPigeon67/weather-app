@@ -5,15 +5,17 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 3rem;
 }
 
 .cold-bg {
   background-image: url('./assets/cold-bg.svg');
+  background-position: 80%;
 }
 
 .warm-bg {
   background-image: url('./assets/warm-bg.svg');
-  background-position: 50%;
+  background-position: 49%;
 }

@@ -1,0 +1,26 @@
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.placeName {
+  font-size: 3.8rem;
+  margin: 1rem 0 0 0;
+}
+
+.description {
+  font-size: 2.4rem;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.temp {
+  font-size: 6.4rem;
+}
+
+.loading {
+  color: white;
+  font-size: 2rem;
+}

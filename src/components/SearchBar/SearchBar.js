@@ -1,13 +1,13 @@
 import styles from './SearchBar.module.css';
 import SearchIcon from '@material-ui/icons/Search';
 
-const SearchBar = props => {
+const SearchBar = ({ change, input }) => {
   return (
-    <form className={styles.searchContainer}>
+    <form className={styles.searchContainer} onSubmit={input}>
       <button type="submit">
-        <SearchIcon className={styles.searchIcon} />
+        <SearchIcon style={{ fontSize: 40 }} className={styles.searchIcon} />
       </button>
-      <input type="text" />
+      <input type="text" onChange={change} />
     </form>
   );
 };
